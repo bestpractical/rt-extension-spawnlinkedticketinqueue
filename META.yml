@@ -1,0 +1,19 @@
+---
+abstract: '[One line description of module''s purpose here]'
+author:
+  - 'Kevin Falcone <falcone@bestpractical.com>'
+build_requires:
+  Test::More: 0
+distribution_type: module
+generated_by: 'Module::Install version 0.78'
+license: gpl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: RT-Extension-SpawnLinkedTicket
+no_index:
+  directory:
+    - html
+    - inc
+    - t
+version: 0.01
