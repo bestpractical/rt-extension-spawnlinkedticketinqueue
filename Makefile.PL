@@ -1,7 +1,7 @@
 use inc::Module::Install;
 
-RTx('RT-Extension-SpawnLinkedTicket');
-all_from 'lib/RT/Extension/SpawnLinkedTicket.pm';
+RTx('RT-Extension-SpawnLinkedTicketInQueue');
+all_from 'lib/RT/Extension/SpawnLinkedTicketInQueue.pm';
 author   'Kevin Falcone <falcone@bestpractical.com>';
 
 build_requires 'Test::More';

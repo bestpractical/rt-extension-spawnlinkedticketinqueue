@@ -1,4 +1,4 @@
-RT-Extension-SpawnLinkedTicket version 0.0.1
+RT-Extension-SpawnLinkedTicketInQueue version 0.0.1
 
 How to install:
 
@@ -6,7 +6,7 @@ How to install:
 2. make
 3. make install (may need root permissions)
 4. Edit your /opt/rt3/etc/RT_SiteConfig.pm 
-    Set(@Plugins, qw(RT::Extension::SpawnLinkedTicket));
+    Set(@Plugins, qw(RT::Extension::SpawnLinkedTicketInQueue));
 5. rm -rf /opt/rt3/var/mason_data/obj
 6. Restart your webserver
 

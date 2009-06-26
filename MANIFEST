@@ -2,4 +2,4 @@ Changes
 MANIFEST
 Makefile.PL
 README
-lib/RT/Extension/SpawnLinkedTicket.pm
+lib/RT/Extension/SpawnLinkedTicketInQueue.pm

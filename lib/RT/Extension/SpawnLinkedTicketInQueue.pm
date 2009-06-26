@@ -1,4 +1,4 @@
-package RT::Extension::SpawnLinkedTicket;
+package RT::Extension::SpawnLinkedTicketInQueue;
 
 our $VERSION = '0.01_01';
 
@@ -9,12 +9,12 @@ use Carp;
 
 =head1 NAME
 
-RT::Extension::SpawnLinkedTicket - [One line description of module's purpose here]
+RT::Extension::SpawnLinkedTicketInQueue - [One line description of module's purpose here]
 
 
 =head1 SYNOPSIS
 
-    use RT::Extension::SpawnLinkedTicket;
+    use RT::Extension::SpawnLinkedTicketInQueue;
 
 =for author to fill in:
     Brief code example(s) here showing commonest usage(s).
@@ -65,7 +65,7 @@ RT::Extension::SpawnLinkedTicket - [One line description of module's purpose her
     that can be set. These descriptions must also include details of any
     configuration language used.
   
-RT::Extension::SpawnLinkedTicket requires no configuration files or environment variables.
+RT::Extension::SpawnLinkedTicketInQueue requires no configuration files or environment variables.
 
 
 =head1 DEPENDENCIES
