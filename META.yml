@@ -18,7 +18,6 @@ no_index:
   directory:
     - html
     - inc
-    - t
 resources:
   license: http://opensource.org/licenses/gpl-license.php
 version: 0.01_01
