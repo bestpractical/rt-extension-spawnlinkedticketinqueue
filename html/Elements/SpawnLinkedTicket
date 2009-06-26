@@ -45,22 +45,12 @@
 %# those contributions and any derivatives thereof.
 %# 
 %# END BPS TAGGED BLOCK }}}
-<form action="/<% RT->Config->Get('WebPath')."Elements/SpawnLinkedTicket" %>" name="SpawnLinkedTicket">
-<input type="hidden" name="CloneTicket" value="<% $Ticket->id %>">
-<input type="submit" value ='<&|/l&>Create</&>' name = 'SpawnLinkedTicket'>
-<select name="LinkType">
-<option value="DependsOn-new">Depends on</option>
-<option value="new-DependsOn">Depended on by</option>
-<option value="MemberOf-new">Parent</option>
-<option value="new-MemberOf">Child</option>
-<option value="RefersTo-new">Refers to</option>
-<option value="new-RefersTo">Referred to by</option>
-</select>
-<&|/l&>Ticket in</&>
-<& /Elements/SelectQueue, ShowNullOption => 0, Name => 'CloneQueue' &>
-</form>
-
+<%INIT>
+my $query_string = "CloneTicket=$CloneTicket&Queue=$CloneQueue&$LinkType=$CloneTicket";
+RT::Interface::Web::Redirect( RT->Config->Get('WebURL')."Ticket/Create.html?$query_string" );
+</%INIT>
 <%ARGS>
-$Ticket => undef
+$CloneTicket => undef
+$CloneQueue => undef
+$LinkType => undef
 </%ARGS>
-
