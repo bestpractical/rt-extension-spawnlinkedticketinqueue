@@ -1,6 +1,6 @@
 package RT::Extension::SpawnLinkedTicket;
 
-our $VERSION = '0.01';
+our $VERSION = '0.01_01';
 
 use warnings;
 use strict;
