@@ -16,5 +16,4 @@ inc/Module/Install/WriteAll.pm
 lib/RT/Extension/SpawnLinkedTicketInQueue.pm
 MANIFEST			This list of files
 META.yml
-pm_to_blib
 README
