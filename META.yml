@@ -1,10 +1,9 @@
 ---
-abstract: "[One line description of module's purpose here]"
+abstract: 'quickly spawn linked tickets in different queues'
 author:
   - 'Kevin Falcone <falcone@bestpractical.com>'
 build_requires:
   ExtUtils::MakeMaker: 6.42
-  Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.42
 distribution_type: module
@@ -18,6 +17,8 @@ no_index:
   directory:
     - html
     - inc
+requires:
+  perl: 5.8.3
 resources:
   license: http://opensource.org/licenses/gpl-license.php
 version: 0.01_01

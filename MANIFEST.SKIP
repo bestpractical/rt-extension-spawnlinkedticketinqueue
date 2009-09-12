@@ -3,3 +3,5 @@ MANIFEST.SKIP
 Makefile
 .git
 .bak
+pm_to_blib/
+blib/
