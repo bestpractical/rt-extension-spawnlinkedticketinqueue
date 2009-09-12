@@ -1,6 +1,6 @@
 package RT::Extension::SpawnLinkedTicketInQueue;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.02';
 
 use 5.008003;
 use warnings;
