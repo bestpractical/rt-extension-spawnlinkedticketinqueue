@@ -46,8 +46,12 @@
 %# 
 %# END BPS TAGGED BLOCK }}}
 <%INIT>
-my $query_string = "CloneTicket=$CloneTicket&Queue=$CloneQueue&$LinkType=$CloneTicket";
-RT::Interface::Web::Redirect( RT->Config->Get('WebURL')."Ticket/Create.html?$query_string" );
+my $query_string = $m->comp('/Elements/QueryString',
+    CloneTicket => $CloneTicket,
+    Queue       => $CloneQueue,
+    $LinkType   => $CloneTicket,
+);
+RT::Interface::Web::Redirect( RT->Config->Get('WebURL') ."Ticket/Create.html?$query_string" );
 </%INIT>
 <%ARGS>
 $CloneTicket => undef
