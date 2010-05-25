@@ -54,12 +54,12 @@
 <input type="hidden" name="CloneTicket" value="<% $Ticket->id %>">
 <input type="submit" value ='<&|/l&>Create</&>' name = 'SpawnLinkedTicket'>
 <select name="LinkType">
-<option value="DependsOn-new">Depends on</option>
-<option value="new-DependsOn">Depended on by</option>
-<option value="MemberOf-new">Parent</option>
-<option value="new-MemberOf">Child</option>
-<option value="RefersTo-new">Refers to</option>
-<option value="new-RefersTo">Referred to by</option>
+<option value="DependsOn-new"><% loc('Depends on') %></option>
+<option value="new-DependsOn"><% loc('Depended on by') %></option>
+<option value="MemberOf-new"><% loc('Parent') %></option>
+<option value="new-MemberOf"><% loc('Child') %></option>
+<option value="RefersTo-new"><% loc('Refers to') %></option>
+<option value="new-RefersTo"><% loc('Referred to by') %></option>
 </select>
 <&|/l&>Ticket in</&>
 <& /Elements/SelectQueue, ShowNullOption => 0, Name => 'CloneQueue' &>
