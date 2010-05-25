@@ -52,7 +52,7 @@
 <tr><td>
 <form action="<% RT->Config->Get('WebPath') ."/Elements/SpawnLinkedTicket" %>" name="SpawnLinkedTicket">
 <input type="hidden" name="CloneTicket" value="<% $Ticket->id %>">
-<input type="submit" value ='<&|/l&>Create</&>' name = 'SpawnLinkedTicket'>
+<input type="submit" value="<&|/l&>Create</&>" name="SpawnLinkedTicket">
 <select name="LinkType">
 <option value="DependsOn-new"><% loc('Depends on') %></option>
 <option value="new-DependsOn"><% loc('Depended on by') %></option>
