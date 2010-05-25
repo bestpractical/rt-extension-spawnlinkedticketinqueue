@@ -1,3 +1,8 @@
+0.04 2010-05-25
+
+     * fix situation when WebPath config option is not empty
+     * use better query string generation
+
 0.03 2009-09-23
 
      * return back missing Makefile.PL
