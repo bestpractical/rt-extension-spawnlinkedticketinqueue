@@ -1,7 +1,12 @@
-0.04 2010-05-25
+0.05 2011-04-15
 
+     * fix compatibility with 3.8.10
      * fix situation when WebPath config option is not empty
      * use better query string generation
+
+0.04 2009-09-30
+
+     * fix rendering issues in different browsers
 
 0.03 2009-09-23
 

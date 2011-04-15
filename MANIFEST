@@ -1,6 +1,6 @@
 Changes
 html/Callbacks/SpawnLinkedTicket/Elements/ShowLinks/Default
-html/Elements/SpawnLinkedTicket
+html/Helpers/SpawnLinkedTicket
 inc/Module/AutoInstall.pm
 inc/Module/Install.pm
 inc/Module/Install/AutoInstall.pm
