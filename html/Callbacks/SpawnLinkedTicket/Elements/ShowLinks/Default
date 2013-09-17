@@ -51,7 +51,7 @@
 <table>
 <tr><td>
 <form action="<% RT->Config->Get('WebPath') ."/Helpers/SpawnLinkedTicket" %>" name="SpawnLinkedTicket">
-<input type="hidden" name="CloneTicket" value="<% $Ticket->id %>">
+<input type="hidden" name="CloneTicket" value="<% $Object->id %>">
 <input type="submit" value="<&|/l&>Create</&>" name="SpawnLinkedTicket">
 <select name="LinkType">
 <option value="DependsOn-new"><% loc('Depends on') %></option>
@@ -65,8 +65,14 @@
 <& /Elements/SelectQueue, ShowNullOption => 0, Name => 'CloneQueue' &>
 </form>
 </td></tr>
-
+<%init>
+# Before RT 4.2, the ShowLinks callback passed $Ticket in ARGS.
+# Continue to accept it for backward compatibility.
+$Object = $Ticket if $Ticket;
+return unless $Object and $Object->isa('RT::Ticket');
+</%init>
 <%ARGS>
 $Ticket => undef
+$Object => undef
 </%ARGS>
 
