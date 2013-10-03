@@ -2,26 +2,28 @@ NAME
     RT::Extension::SpawnLinkedTicketInQueue - quickly spawn linked tickets
     in different queues
 
-SYNOPSIS
-        # in RT_SiteConfig
-        Set(@Plugins,
-            ... other plugins ...,
-            'RT::Extension::SpawnLinkedTicketInQueue',
-        );
-
 DESCRIPTION
     After installing this extension, on ticket's page in the Links block you
     should see new controls.
 
 INSTALLATION
-    Use RTHOME environment variable if RT is not in default /opt/rt3 path.
+    Use RTHOME environment variable if RT is not in default /opt/rt4 path.
     Otherwise commands are usual:
 
         perl Makefile.PL
         make
         make install (may need root permissions)
 
-    Change config according to "SYNOPSIS".
+    If you are running RT 4.2, add
+
+        Plugin('RT::Extension::SpawnLinkedTicketInQueue');
+
+    to your RT_SiteConfig.pm. If running an earlier RT release, use:
+
+        Set(@Plugins,
+            ... other plugins ...,
+            'RT::Extension::SpawnLinkedTicketInQueue',
+        );
 
     Flush mason cache:
 
@@ -40,7 +42,8 @@ AUTHOR
     Kevin Falcone <falcone@bestpractical.com>
 
 LICENCE AND COPYRIGHT
-    Copyright (c) 2009, Best Practical Solutions, LLC. All rights reserved.
+    Copyright (c) 2009-2013, Best Practical Solutions, LLC. All rights
+    reserved.
 
     This module is free software; you can redistribute it and/or modify it
     under the terms of version 2 of the GNU General Public License.

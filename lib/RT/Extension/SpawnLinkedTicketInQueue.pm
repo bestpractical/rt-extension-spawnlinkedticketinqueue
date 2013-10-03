@@ -10,14 +10,6 @@ use strict;
 
 RT::Extension::SpawnLinkedTicketInQueue - quickly spawn linked tickets in different queues
 
-=head1 SYNOPSIS
-
-    # in RT_SiteConfig
-    Set(@Plugins,
-        ... other plugins ...,
-        'RT::Extension::SpawnLinkedTicketInQueue',
-    );
-
 =head1 DESCRIPTION
 
 After installing this extension, on ticket's page in the Links block
@@ -25,14 +17,23 @@ you should see new controls.
 
 =head1 INSTALLATION
 
-Use RTHOME environment variable if RT is not in default F</opt/rt3>
+Use RTHOME environment variable if RT is not in default F</opt/rt4>
 path. Otherwise commands are usual:
 
     perl Makefile.PL
     make
     make install (may need root permissions)
 
-Change config according to L</SYNOPSIS>.
+If you are running RT 4.2, add
+
+    Plugin('RT::Extension::SpawnLinkedTicketInQueue');
+
+to your RT_SiteConfig.pm.  If running an earlier RT release, use:
+
+    Set(@Plugins,
+        ... other plugins ...,
+        'RT::Extension::SpawnLinkedTicketInQueue',
+    );
 
 Flush mason cache:
     
@@ -54,7 +55,7 @@ Kevin Falcone E<lt>falcone@bestpractical.comE<gt>
 
 =head1 LICENCE AND COPYRIGHT
 
-Copyright (c) 2009, Best Practical Solutions, LLC.  All rights reserved.
+Copyright (c) 2009-2013, Best Practical Solutions, LLC.  All rights reserved.
 
 This module is free software; you can redistribute it and/or
 modify it under the terms of version 2 of the GNU General Public License.
