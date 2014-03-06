@@ -56,8 +56,8 @@
 <select name="LinkType">
 <option value="DependsOn-new"><% loc('Depends on') %></option>
 <option value="new-DependsOn"><% loc('Depended on by') %></option>
-<option value="MemberOf-new"><% loc('Parent') %></option>
-<option value="new-MemberOf"><% loc('Child') %></option>
+<option value="MemberOf-new"><% loc('Parents') %></option>
+<option value="new-MemberOf"><% loc('Children') %></option>
 <option value="RefersTo-new"><% loc('Refers to') %></option>
 <option value="new-RefersTo"><% loc('Referred to by') %></option>
 </select>
