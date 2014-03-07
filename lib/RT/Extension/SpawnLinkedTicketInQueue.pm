@@ -1,6 +1,6 @@
 package RT::Extension::SpawnLinkedTicketInQueue;
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 use 5.008003;
 use warnings;
@@ -55,7 +55,7 @@ Kevin Falcone E<lt>falcone@bestpractical.comE<gt>
 
 =head1 LICENCE AND COPYRIGHT
 
-Copyright (c) 2009-2013, Best Practical Solutions, LLC.  All rights reserved.
+Copyright (c) 2009-2014, Best Practical Solutions, LLC.  All rights reserved.
 
 This module is free software; you can redistribute it and/or
 modify it under the terms of version 2 of the GNU General Public License.

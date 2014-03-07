@@ -1,25 +1,23 @@
-0.06 2013-10-03
+0.07 2014-03-07
+ - Fix Child/Parent to be the localized strings available in RT
 
-    * fix compatibility with RT 4.2
+0.06 2013-10-03
+ - fix compatibility with RT 4.2
 
 0.05 2011-04-15
-
-     * fix compatibility with 3.8.10
-     * fix situation when WebPath config option is not empty
-     * use better query string generation
+ - fix compatibility with 3.8.10
+ - fix situation when WebPath config option is not empty
+ - use better query string generation
 
 0.04 2009-09-30
-
-     * fix rendering issues in different browsers
+ - fix rendering issues in different browsers
 
 0.03 2009-09-23
-
-     * return back missing Makefile.PL
+ - return back missing Makefile.PL
 
 0.02 2009-09-12
-
-     * documentation
+ - documentation
 
 0.01_01
+ - Initial Release
 
-     Initial Release
