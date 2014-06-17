@@ -1,9 +1,11 @@
 use inc::Module::Install;
 
-RTx('RT-Extension-SpawnLinkedTicketInQueue');
-all_from 'lib/RT/Extension/SpawnLinkedTicketInQueue.pm';
-readme_from 'lib/RT/Extension/SpawnLinkedTicketInQueue.pm';
+RTx 'RT-Extension-SpawnLinkedTicketInQueue';
 
-auto_install;
+repository 'https://github.com/bestpractical/rt-extension-spawnlinkedticketinqueue';
+
+requires_rt '4.0.0';
+rt_too_new '4.4.0';
+
 WriteAll;
 

@@ -1,6 +1,6 @@
 package RT::Extension::SpawnLinkedTicketInQueue;
 
-our $VERSION = '0.07';
+our $VERSION = '1.00';
 
 use 5.008003;
 use warnings;
@@ -17,71 +17,57 @@ you should see new controls.
 
 =head1 INSTALLATION
 
-Use RTHOME environment variable if RT is not in default F</opt/rt4>
-path. Otherwise commands are usual:
+=over
 
-    perl Makefile.PL
-    make
-    make install (may need root permissions)
+=item C<perl Makefile.PL>
 
-If you are running RT 4.2, add
+=item C<make>
+
+=item C<make install>
+
+May need root permissions
+
+=item Edit your F</opt/rt4/etc/RT_SiteConfig.pm>
+
+If you are using RT 4.2 or greater, add this line:
 
     Plugin('RT::Extension::SpawnLinkedTicketInQueue');
 
-to your RT_SiteConfig.pm.  If running an earlier RT release, use:
+For RT 4.0, add this line:
 
-    Set(@Plugins,
-        ... other plugins ...,
-        'RT::Extension::SpawnLinkedTicketInQueue',
-    );
+    Set(@Plugins, qw(RT::Extension::SpawnLinkedTicketInQueue));
 
-Flush mason cache:
-    
-    rm -rf /opt/rt3/var/mason_data/obj
+or add C<RT::Extension::SpawnLinkedTicketInQueue> to your existing C<@Plugins> line.
 
-Stop and start webserver.
+=item Clear your mason cache
 
-=head1 BUGS AND LIMITATIONS
+    rm -rf /opt/rt4/var/mason_data/obj
 
-No bugs have been reported.
+=item Restart your webserver
 
-Please report any bugs or feature requests to
-C<bug-rt-extension-spawnlinkedticket@rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org>.
+=back
 
 =head1 AUTHOR
 
-Kevin Falcone E<lt>falcone@bestpractical.comE<gt>
+Best Practical Solutions, LLC E<lt>modules@bestpractical.comE<gt>
 
-=head1 LICENCE AND COPYRIGHT
+=head1 BUGS
 
-Copyright (c) 2009-2014, Best Practical Solutions, LLC.  All rights reserved.
+All bugs should be reported via email to
 
-This module is free software; you can redistribute it and/or
-modify it under the terms of version 2 of the GNU General Public License.
+    L<bug-RT-Extension-SpawnLinkedTicketInQueue@rt.cpan.org|mailto:bug-RT-Extension-SpawnLinkedTicketInQueue@rt.cpan.org>
 
-=head1 DISCLAIMER OF WARRANTY
+or via the web at
 
-BECAUSE THIS SOFTWARE IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
-FOR THE SOFTWARE, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN
-OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
-PROVIDE THE SOFTWARE "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER
-EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE
-ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE IS WITH
-YOU. SHOULD THE SOFTWARE PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL
-NECESSARY SERVICING, REPAIR, OR CORRECTION.
+    L<rt.cpan.org|http://rt.cpan.org/Public/Dist/Display.html?Name=RT-Extension-SpawnLinkedTicketInQueue>.
 
-IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
-WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR
-REDISTRIBUTE THE SOFTWARE AS PERMITTED BY THE ABOVE LICENCE, BE
-LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL,
-OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE
-THE SOFTWARE (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING
-RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A
-FAILURE OF THE SOFTWARE TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF
-SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
-SUCH DAMAGES.
+=head1 LICENSE AND COPYRIGHT
+
+This software is Copyright (c) {{ $dist->license->year }} by {{ $dist->license->holder }}
+
+This is free software, licensed under:
+
+  The GNU General Public License, Version 2, June 1991
 
 =cut
 
