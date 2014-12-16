@@ -1,6 +1,6 @@
 package RT::Extension::SpawnLinkedTicketInQueue;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 use 5.008003;
 use warnings;
@@ -63,7 +63,7 @@ or via the web at
 
 =head1 LICENSE AND COPYRIGHT
 
-This software is Copyright (c) {{ $dist->license->year }} by {{ $dist->license->holder }}
+This software is Copyright (c) 2014 by Best Practical Solutions
 
 This is free software, licensed under:
 

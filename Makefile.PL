@@ -7,5 +7,6 @@ repository 'https://github.com/bestpractical/rt-extension-spawnlinkedticketinque
 requires_rt '4.0.0';
 rt_too_new '4.4.0';
 
-WriteAll;
+sign();
+WriteAll();
 
